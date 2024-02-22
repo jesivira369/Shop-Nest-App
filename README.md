@@ -22,7 +22,14 @@
   <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
+# High-End Bicycle Store Backend API
+
 ## Description
+
+This repository houses the backend API for a premier road bicycle store, utilizing a powerful combination of NestJS for the framework, TypeORM for data management, MySQL for the database, Docker for containerization, and Swagger for documentation. The API caters to the operational needs of managing a sophisticated inventory of high-end bicycles, streamlining product listing, inventory control, order processing, and client communication.
+
+Built to ensure a scalable and maintainable architecture, this API incorporates NestJS's efficiency with TypeORM's seamless object-relational mapping to interact effectively with the MySQL database. Docker is employed to encapsulate the app's environment, ensuring consistent deployments, while Swagger offers a clear, interactive documentation platform for easy understanding and testing of the API endpoints.
+
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
@@ -44,6 +51,21 @@ $ yarn run start:dev
 # production mode
 $ yarn run start:prod
 ```
+
+## MySQL Configuration
+
+```bash
+MYSQL_USER: root (or your MySQL username)
+MYSQL_PASSWORD: yourpassword
+MYSQL_DATABASE: highendbikes
+MYSQL_ROOT_PASSWORD: yourrootpassword
+```
+
+## Docker Configuration
+The project is configured to run within a Docker container, ensuring an isolated environment that's consistent across development and production setups. Ensure Docker is installed and use the provided Dockerfile or docker-compose.yml to build and run the container.
+
+## Swagger Documentation
+To access the Swagger documentation, navigate to /api on the running application server. This interactive documentation allows you to test endpoints directly from your browser.
 
 ## Test
 
