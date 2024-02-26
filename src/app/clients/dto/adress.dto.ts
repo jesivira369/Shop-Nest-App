@@ -4,6 +4,7 @@ import { ApiProperty } from '@nestjs/swagger';
 export class AddressDto {
 
     @ApiProperty({
+        name: 'id',
         description: 'The unique identifier of the address',
         example: 1,
         required: false,
@@ -13,6 +14,8 @@ export class AddressDto {
     id:number;
 
     @ApiProperty({
+        name: 'street',
+        required: true,
         description: 'The street of the address',
         example: '123 Main St',
     })
@@ -21,6 +24,8 @@ export class AddressDto {
     street: string;
 
     @ApiProperty({
+        name: 'city',
+        required: true,
         description: 'The city of the address',
         example: 'Springfield',
     })
@@ -29,6 +34,8 @@ export class AddressDto {
     city: string;
 
     @ApiProperty({
+        name: 'state',
+        required: true,
         description: 'The state of the address',
         example: 'IL',
     })
@@ -37,6 +44,8 @@ export class AddressDto {
     state: string;
 
     @ApiProperty({
+        name: 'country',
+        required: true,
         description: 'The country of the address',
         example: 'USA',
     })

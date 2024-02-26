@@ -1,0 +1,607 @@
+{
+	"info": {
+		"_postman_id": "8879c76c-a8c4-403e-9a7d-ab3c801aa487",
+		"name": "Shop App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19282020"
+	},
+	"item": [
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "Create Product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 9,\r\n    \"name\": \"Pinarello F12\",\r\n    \"price\": 10000,\r\n    \"description\": \"The Pinarello F12 is a state-of-the-art road bike designed for the highest level of racing. With cutting-edge aerodynamics and an ultra-light carbon frame, it provides unmatched performance and speed.\",\r\n    \"stock\": 5,\r\n    \"deleted\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}{{puerto\n}}/products",
+							"host": [
+								"{{server}}{{puerto\n}}"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Product by Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Specialized S-Works Tarmac SL7\",\r\n    \"price\": 12000,\r\n    \"description\": \"The Specialized S-Works Tarmac SL7 redefines the modern race bike with its perfect combination of aerodynamics, lightness, and ride quality.\",\r\n    \"stock\": 10\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}{{puerto\n}}/products/3",
+							"host": [
+								"{{server}}{{puerto\n}}"
+							],
+							"path": [
+								"products",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Products",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Specialized S-Works Tarmac SL7\",\r\n    \"price\": 12000,\r\n    \"description\": \"The Specialized S-Works Tarmac SL7 redefines the modern race bike with its perfect combination of aerodynamics, lightness, and ride quality.\",\r\n    \"stock\": 10\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}{{puerto\n}}/products",
+							"host": [
+								"{{server}}{{puerto\n}}"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Products Deleted",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Specialized S-Works Tarmac SL7\",\r\n    \"price\": 12000,\r\n    \"description\": \"The Specialized S-Works Tarmac SL7 redefines the modern race bike with its perfect combination of aerodynamics, lightness, and ride quality.\",\r\n    \"stock\": 10\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}{{puerto\n}}/products/deleted",
+							"host": [
+								"{{server}}{{puerto\n}}"
+							],
+							"path": [
+								"products",
+								"deleted"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Product",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"name\": \"Pinarello F12\",\r\n    \"price\": 10000,\r\n    \"description\": \"The Pinarello F12 is a state-of-the-art road bike designed for the highest level of racing. With cutting-edge aerodynamics and an ultra-light carbon frame, it provides unmatched performance and speed.\",\r\n    \"stock\": 5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}{{puerto\n}}/products",
+							"host": [
+								"{{server}}{{puerto\n}}"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete product",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"name\": \"Pinarello F12\",\r\n    \"price\": 10500,\r\n    \"description\": \"The Pinarello F12 is a state-of-the-art road bike designed for the highest level of racing. With cutting-edge aerodynamics and an ultra-light carbon frame, it provides unmatched performance and speed.\",\r\n    \"stock\": 10\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}{{puerto\n}}/products/9",
+							"host": [
+								"{{server}}{{puerto\n}}"
+							],
+							"path": [
+								"products",
+								"9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Restore Product",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"name\": \"Pinarello F12\",\r\n    \"price\": 10500,\r\n    \"description\": \"The Pinarello F12 is a state-of-the-art road bike designed for the highest level of racing. With cutting-edge aerodynamics and an ultra-light carbon frame, it provides unmatched performance and speed.\",\r\n    \"stock\": 10\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}{{puerto\n}}/products/restore/8",
+							"host": [
+								"{{server}}{{puerto\n}}"
+							],
+							"path": [
+								"products",
+								"restore",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Stock",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"stock\": 500\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}{{puerto\n}}/products/stock",
+							"host": [
+								"{{server}}{{puerto\n}}"
+							],
+							"path": [
+								"products",
+								"stock"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Increase Stock",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"stock\": 500\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}{{puerto\n}}/products/increase-stock",
+							"host": [
+								"{{server}}{{puerto\n}}"
+							],
+							"path": [
+								"products",
+								"increase-stock"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Decrease Stock",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"stock\": 400\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}{{puerto\n}}/products/decrease-stock",
+							"host": [
+								"{{server}}{{puerto\n}}"
+							],
+							"path": [
+								"products",
+								"decrease-stock"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Clients",
+			"item": [
+				{
+					"name": "Create Client",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Andrea Hernandez\",\r\n    \"email\": \"andrea@gmail.com\",\r\n    \"address\": {\r\n        \"street\": \"Street 453\",\r\n        \"city\": \"Miami\",\r\n        \"state\": \"FL\",\r\n        \"country\": \"USA\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}{{puerto\n}}/clients",
+							"host": [
+								"{{server}}{{puerto\n}}"
+							],
+							"path": [
+								"clients"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Client",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Jesus Sivira\",\r\n    \"email\": \"jesus@gmail.com\",\r\n    \"address\": {\r\n        \"street\": \"123 Main St\",\r\n        \"city\": \"Miami\",\r\n        \"state\": \"IL\",\r\n        \"country\": \"USA\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}{{puerto\n}}/clients/2",
+							"host": [
+								"{{server}}{{puerto\n}}"
+							],
+							"path": [
+								"clients",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Clients",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}{{puerto\n}}/clients",
+							"host": [
+								"{{server}}{{puerto\n}}"
+							],
+							"path": [
+								"clients"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Client by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}{{puerto\n}}/clients/5",
+							"host": [
+								"{{server}}{{puerto\n}}"
+							],
+							"path": [
+								"clients",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Client",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{server}}{{puerto\n}}/clients/6",
+							"host": [
+								"{{server}}{{puerto\n}}"
+							],
+							"path": [
+								"clients",
+								"6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Orders",
+			"item": [
+				{
+					"name": "Create Order",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"client\": {\r\n        \"id\": 2\r\n    },\r\n    \"products\": [\r\n        {\r\n            \"id\": 1\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}{{puerto\n}}/orders",
+							"host": [
+								"{{server}}{{puerto\n}}"
+							],
+							"path": [
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Order by iD",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"client\": {\r\n        \"id\": 2\r\n    },\r\n    \"products\": [\r\n        {\r\n            \"id\": 1\r\n        },\r\n        {\r\n            \"id\": 2\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}{{puerto\n}}/orders/317847cb-cda4-4a94-a7c9-8a276813260f",
+							"host": [
+								"{{server}}{{puerto\n}}"
+							],
+							"path": [
+								"orders",
+								"317847cb-cda4-4a94-a7c9-8a276813260f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Pending Orders",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"client\": {\r\n        \"id\": 2\r\n    },\r\n    \"products\": [\r\n        {\r\n            \"id\": 1\r\n        },\r\n        {\r\n            \"id\": 2\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}{{puerto\n}}/orders/pending",
+							"host": [
+								"{{server}}{{puerto\n}}"
+							],
+							"path": [
+								"orders",
+								"pending"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Confirmed Orders",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"client\": {\r\n        \"id\": 2\r\n    },\r\n    \"products\": [\r\n        {\r\n            \"id\": 1\r\n        },\r\n        {\r\n            \"id\": 2\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}{{puerto\n}}/orders/confirmed",
+							"host": [
+								"{{server}}{{puerto\n}}"
+							],
+							"path": [
+								"orders",
+								"confirmed"
+							],
+							"query": [
+								{
+									"key": "start",
+									"value": "2024-02-26",
+									"disabled": true
+								},
+								{
+									"key": "end",
+									"value": "2024-03",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Orders by client",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"client\": {\r\n        \"id\": 2\r\n    },\r\n    \"products\": [\r\n        {\r\n            \"id\": 1\r\n        },\r\n        {\r\n            \"id\": 2\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}{{puerto\n}}/orders/client/2",
+							"host": [
+								"{{server}}{{puerto\n}}"
+							],
+							"path": [
+								"orders",
+								"client",
+								"2"
+							],
+							"query": [
+								{
+									"key": "start",
+									"value": "2024-02-26",
+									"disabled": true
+								},
+								{
+									"key": "end",
+									"value": "2024-03",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Confirm Order",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"client\": {\r\n        \"id\": 2\r\n    },\r\n    \"products\": [\r\n        {\r\n            \"id\": 1\r\n        },\r\n        {\r\n            \"id\": 2\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}{{puerto\n}}/orders/confirm/25c5fb28-af0e-4ca2-b2ec-0e5b6f929054",
+							"host": [
+								"{{server}}{{puerto\n}}"
+							],
+							"path": [
+								"orders",
+								"confirm",
+								"25c5fb28-af0e-4ca2-b2ec-0e5b6f929054"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

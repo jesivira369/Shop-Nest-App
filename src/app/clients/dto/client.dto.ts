@@ -5,8 +5,9 @@ import { AddressDto } from './adress.dto';
 
 export class ClientDto {
     @ApiProperty({
+        name: 'id',
+        type: Number,
         description: 'The unique identifier of the client',
-        example: 1,
         required: false,
     })
     @IsOptional()
@@ -15,7 +16,9 @@ export class ClientDto {
     id: number;
 
     @ApiProperty({
+        name: 'name',
         description: 'The name of the client',
+        type: String,
         example: 'John Doe',
         required: true,
     })
@@ -24,7 +27,9 @@ export class ClientDto {
     name: string;
 
     @ApiProperty({
+        name: 'email',
         description: 'The email address of the client',
+        type: String,
         example: 'jesus@example.com',
         required: true,
     })
@@ -34,9 +39,12 @@ export class ClientDto {
 
     @Type(() => AddressDto)
     @ApiProperty({
+        name: 'address',
+        required: true,
         description: 'The address of the client',
-        type: () => AddressDto,
+        type: AddressDto,
     })
+    @Type(() => AddressDto)
     @IsObject()
     @IsNotEmpty()
     address: AddressDto;
