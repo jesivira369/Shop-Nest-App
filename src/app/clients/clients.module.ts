@@ -13,6 +13,7 @@ import { Address } from './entity/address.entity';
     ]),
   ],
   controllers: [ClientsController],
-  providers: [ClientsService]
+  providers: [ClientsService],
+  exports: [ClientsService]
 })
 export class ClientsModule {}
