@@ -5,7 +5,7 @@ import { ProductDto } from './dto/product.dto';
 import { StockDto } from '../stock/stock.dto';
 
 @Controller('products')
-@ApiTags('products')
+@ApiTags('Products')
 
 export class ProductController {
 
