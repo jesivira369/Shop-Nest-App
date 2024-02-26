@@ -1,5 +1,6 @@
-import { Column, Entity, JoinColumn, OneToOne, PrimaryGeneratedColumn } from "typeorm";
+import { Column, Entity, JoinColumn, OneToMany, OneToOne, PrimaryGeneratedColumn } from "typeorm";
 import { Address } from "./address.entity";
+import { Order } from "src/app/orders/entity/order.entity";
 
 @Entity()
 export class Client {
@@ -16,4 +17,7 @@ export class Client {
     @OneToOne(() => Address, {cascade: ['insert', 'update'], eager: true})
     @JoinColumn()
     address: Address;
+
+    @OneToMany(() => Order, order => order.client)
+    orders?: Order[];
 }
